@@ -1,0 +1,514 @@
+body {
+    /* background-color: rgb(37, 172, 255); */
+    font-size: 14px;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* 初始位置 */
+    }
+    50% {
+      transform: translateY(-5px); /* 向上移动 */
+    }
+  }
+
+
+/* 左导航 */
+.bili-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 24px;
+    box-sizing: border-box;
+
+}
+.left-entry {
+    display: flex;
+
+}
+.left-entry .entry-title {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    color: #fff;
+    height: 64px;
+    
+}
+.left-entry .entry-title:hover {
+    animation: bounce 0.5s ease;
+}
+.left-entry .entry-title.no-bounce:hover {
+    animation: none;
+}
+.left-entry .entry-title svg {
+    margin-right: 6px;
+}
+
+/* 中间搜索区 */
+.center-search-container {
+    position: relative;
+    flex:1; /* 占剩余宽度 自适应 */
+    height: 40px;
+    padding: 0 48px 0 4px;
+    border-radius: 8px;
+    border: 1px solid #e3e5e7;
+    background-color: #dce4ea;
+    display: flex;
+    align-items: center;
+}
+.center-search-container:hover {
+    background-color: #fff;
+}
+.center-search-container .center-search-content {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    padding: 0 6x;
+}
+.center-search-container .center-search-content input {
+    background-color: transparent;
+    flex: 1;
+    overflow: hidden;
+    line-height: 10px;
+    padding-right: 8px;
+}
+.center-search-container .center-search-content input:focus {
+    background-color: #dce4ea;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+.center-search-container .nav-search-button {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    line-height: 32px; /* 行与行之间的垂直间距 垂直居中 */
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.center-search-container .nav-search-button:hover {
+    background-color: #dce4ea;
+    border-radius: 20%;
+}
+/* 右侧导航 */
+.right-entry {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.right-entry .header-avatar {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.right-entry .header-avatar a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 6px;
+    right: 10px;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #00abe7;
+    /* border: 2px solid #fff; */
+}
+.right-entry .right-entry-item {
+    margin-right: 4px;
+    min-width: 50px; /* 宽度最小为50px 防止挤压 */
+}
+.right-entry .right-entry-item a {
+    display: flex;
+    flex-direction: column; /* 竖排 */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.right-entry .right-entry-item a span {
+    margin-top: 2px;
+}
+.right-entry .right-entry-item a svg:hover {
+    animation: bounce 0.5s ease;
+}
+.right-entry .upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #fb7299;
+    border-radius: 8px;
+    margin-left: 10px;
+    transition: background-color .3s;
+}
+.right-entry .upload:hover {
+    background-color: #fc8bab;
+}
+/* banner */
+.bili-nav {
+    z-index:1000;
+    position: absolute;
+    top: 0;
+
+}
+.bili-banner {
+    position: relative;
+    height: 155px;
+    width: 100%;
+    overflow: hidden;
+}
+.bili-banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; /* 居中*/
+    left: 0;
+    object-fit: cover; /* 会跟着页面大小调整填充 */
+}
+.bili-banner .logo {
+    display: flex;
+    align-items: flex-end; /* 下对称 */
+    width: 100%;
+    height: 100%;
+    padding: 0 64px;
+}
+.bili-banner .logo a {
+    position: relative;
+    width: 152px;
+    height: 78px;
+    margin-bottom: 10px;
+}
+.bili-banner .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
+}
+
+/* 频道 */
+/* 左频道 */
+.bili-channel {
+    display: flex;
+    align-items: center;
+    height: 110px;
+    padding: 0 60px;
+
+}
+.bili-channel .channel-icons {
+    display: flex;
+    align-items: center;
+
+}
+.bili-channel .channel-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+}
+.bili-channel .icon-bg {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+.bili-channel .icon-bg_dynamic {
+    background-color: #ff9212;
+}
+.bili-channel .icon-bg_popular {
+    background-color: #f07775;
+}
+.bili-channel .icon-bg svg {
+    width: 25px;
+    height: 25px;
+}
+/* 右频道 左部分 */
+.right-channel-container {
+    display: flex;
+    width: 100%;
+}
+.channel-items_left {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 10px; 
+    width: 100%;  /* 自适应*/
+    
+}
+.channel-items_left a {
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #f1f2f3;
+    background-color: #f6f7f8;
+    border-radius: 6px;
+    text-align: center;
+    color: #61666d;
+    transition: background-color .3s;
+}
+.channel-items_left a:hover {
+    background-color: #dce4ea;
+}
+/* 右频道 右部分 */
+.channel-items_right {
+    width: 240px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column; /* 按列排列 */
+    row-gap: 10px;
+    flex-shrink: 0; /* 不缩小(不会挤压) */
+    margin-left: 25px;
+    border-left: 1px solid #e2e5e7;
+}
+.channel-items_right a {
+    height: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px; /* 字间距 */
+    margin-left: 10px;
+
+}
+.channel-items_right a:hover span{
+    color: #18b3ed;
+}
+.channel-items_right a svg {
+    width: 20px;
+    height: 20px;
+    fill: #61666d; /* 填充颜色 */
+    margin-right: 4px;
+
+}
+.channel-items_right a span {
+    text-align: center;
+    color: #61666d;
+} 
+
+/* 主体-推荐列表 */
+.main {
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.main .recommend-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    width: 100%;
+}
+.recommend-card .card-image {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 155px;
+    width: 264px;
+}
+.recommend-card .card-image img {
+    width: 100%;
+    height: 100%;
+}
+.recommend-card .image-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    padding: 16px 8px 6px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 13px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,.8) 100%);
+}
+.recommend-card .status-left {
+    display: flex;
+    align-items: center;
+    flex: 1; /* 占据剩余空间 */
+}
+.image-mask .status-item {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    
+}
+.image-mask svg {
+    height: 18px;
+    width: 18px;
+    margin-right: 2px;
+}
+.card-info h3 {
+    font-size: 15px;
+    padding-right: 16px;
+    overflow: hidden; /* 必须配合 -webkit-line-clamp 使用 */
+    line-height: 22px;
+    min-height: 44px;   /* 至少两行高度 */
+    display: -webkit-box; /* 弹性盒模型 */
+    -webkit-box-orient: vertical; /* 垂直排列 */
+    -webkit-line-clamp: 2; /* 限制行数为2 */
+    /* 标准属性（未来兼容） */
+    line-clamp: 2;  
+}
+.card-info h3 a {
+    transition: background-color 0.3s ease;
+}
+.card-info h3 a:hover {
+    color: #00b6ef;
+}
+
+.card-info .info-bottom a{
+    display: flex;
+    align-items: center;
+    color: #b3b6b5;
+    transition: background-color 0.3s ease;
+    /* margin-top: 10px; */
+}
+.card-info .info-bottom a:hover {
+    color: #00b6ef;
+}
+.card-info .info-bottom svg {
+    width: 17px;
+    height: 17px;
+    margin-right: 2px;
+}
+.info-date {
+    margin-left: 4px;
+}
+
+/* 轮播图 */
+.recommend-container .carousel-area {
+    /* 轮播图横竖行列占2/3 */
+    grid-row: 1/3; 
+    grid-column: 1/3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.carousel-area img {
+    width: 100%;
+
+}
+.carousel-area .mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 85%;
+    background: linear-gradient(0,#0288b9 23%, transparent 35%);
+    border-radius: 6px;
+}
+
+.carousel-area .tools {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 94px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.carousel-area .tools a {
+    color: #fff;
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.tools ul {
+    display: flex;
+}
+.tools li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff6;
+    margin: 4px;
+    cursor: pointer;
+}
+.tools li.active {
+    background-color: #ffffffff;
+    width: 14px;
+    height: 14px;
+    margin: 1px;
+}
+.tools .buttons {
+    position: absolute;
+    bottom: 23px;
+    right: 15px;
+}
+.tools .buttons button {
+    width: 28px;
+    height: 28px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+}
+.tools .buttons button:last-child {
+    margin-right: 0;
+}
+.tools .buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.352);
+}
+.tools .buttons svg {
+   width: 12px;
+   height: 12px;
+   color: #ffffff;
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: fixed; /*固定定位*/
+    right: 12px;
+    bottom: 40px;
+}
+.sidebar .primary-btn {
+    width: 40px;
+    border-radius: 8px;
+    border: 1px solid #e3e5e7;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 6px;
+    text-align: center;
+    flex-direction: column;
+    font-size: 13px;
+    padding: 6px 0 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sidebar .primary-btn:hover {
+    background-color: #e3e5e7;
+}
+.primary-btn svg {
+    width: 24px;
+    height: 24px;
+}
+.primary-btn .btn-text {
+   margin-top: 2px;
+}
+.primary-btn .goback {
+    padding: 4px;
+}
+.primary-btn .top-btn {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}

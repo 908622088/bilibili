@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    
+}
+
+ul, ol, li {
+    list-style: none; /* 去掉列表的默认样式 */
+}
+
+a {
+    text-decoration: none; /* 去掉链接的下划线 */
+    color: #000;
+    cursor: pointer;
+
+}
+body {
+    font-size: 14px;
+}
+
+input {
+    outline: none; /* 去掉input的焦点样式 */
+    border: none; /* 去掉input的边框 */
+}
+
+image {
+    vertical-align: middle; /* 图片和文字垂直居中对齐 */
+}
